@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Eras Portal - Login</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.22.1/jquery.validate.min.js" integrity="sha512-qu7dMuIm2f0KcKZ3BOoP4c+Hn+r4E8PbD2Ro4rmKsOyheCxcwhzQpf6SojA76dn+owqfANzfTFUTkGA+HpHjOA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <style>
+        body {
+            background-image: url("taylor.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #b8cde0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        .login-section {
+            width: 90%;
+            max-width: 430px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .site-title {
+            color: white;
+            font-size: 34px;
+            font-weight: bold;
+            margin: 0 0 6px 0;
+            text-shadow: 2px 2px 4px #263b4f;
+        }
+
+        .site-subtitle {
+            color: white;
+            font-size: 14px;
+            margin: 0 0 18px 0;
+            text-shadow: 1px 1px 3px #263b4f;
+        }
+
+        nav {
+            margin-bottom: 25px;
+        }
+
+        nav a {
+            display: inline-block;
+            color: white;
+            background-color: rgba(38, 59, 79, 0.75);
+            border: 2px solid #d9a6a6;
+            border-radius: 15px;
+            padding: 7px 15px;
+            margin: 0 5px;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #d9a6a6;
+            color: #263b4f;
+        }
+
+        .login-section h2 {
+            color: white;
+            font-size: 27px;
+            margin: 0 0 8px 0;
+            text-shadow: 2px 2px 4px #263b4f;
+        }
+
+        .login-description {
+            color: white;
+            font-size: 14px;
+            margin: 0 0 22px 0;
+            text-shadow: 1px 1px 3px #263b4f;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 6px;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: left;
+            text-shadow: 1px 1px 3px #263b4f;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            display: block;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 18px;
+            padding: 12px;
+            border: 3px solid #d9a6a6;
+            background-color: rgba(255, 248, 235, 0.94);
+            color: #263b4f;
+            font-size: 15px;
+            text-align: center;
+            border-radius: 15px;
+        }
+
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            border: 3px solid #6f8fa9;
+            outline: none;
+        }
+
+        input::placeholder {
+            color: #66788a;
+        }
+
+        label.error {
+            color: #ffcccc;
+            font-size: 12px;
+            text-shadow: 1px 1px 2px #000;
+            margin-top: -12px;
+            margin-bottom: 12px;
+            text-align: center;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        .alert-error {
+            background-color: rgba(217, 83, 79, 0.85);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            font-weight: bold;
+            display: none;
+        }
+
+        button[type="submit"] {
+            display: block;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 12px;
+            background-color: #6f8fa9;
+            color: white;
+            border: 3px solid #d9a6a6;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 15px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #d9a6a6;
+            color: #263b4f;
+        }
+
+        .register-link {
+            color: white;
+            font-size: 14px;
+            margin-top: 20px;
+            text-shadow: 1px 1px 3px #263b4f;
+        }
+
+        .register-link a {
+            color: #fff1d6;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .register-link a:hover {
+            color: #d9a6a6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <section class="login-section">
+
+            <h1 class="site-title">The Eras Portal</h1>
+            <p class="site-subtitle">A little space for every era</p>
+
+            <nav>
+                <a href="index.html">Login</a>
+                <a href="register.html">Register</a>
+            </nav>
+
+            <h2>Welcome Back, Swiftie</h2>
+            <p class="login-description">Enter the portal and continue your journey through the eras.</p>
+
+            <form id="loginForm" action="#" method="post">
+
+                <div id="loginError" class="alert-error">Invalid email or password. Please register or check your info.</div>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" maxlength="50">
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" maxlength="20">
+
+                <button type="submit">Enter The Eras</button>
+
+                <p class="register-link">
+                    New to The Eras Portal?
+                    <a href="register.html">Create an account</a>
+                </p>
+
+            </form>
+
+        </section>
+    </main>
+
+    <script>
+        $(document).ready(function(){
+            $("#loginForm").validate({
+                rules: {
+                    email: { required: true, email: true },
+                    password: { required: true, minlength: 5 }
+                },
+                messages: {
+                    email: {
+                        required: "Please enter your email address.",
+                        email: "Please enter a valid email format."
+                    },
+                    password: {
+                        required: "Please provide your password.",
+                        minlength: "Your password must be at least 5 characters long."
+                    }
+                },
+                submitHandler: function(form) {
+                    var enteredEmail = $("#email").val();
+                    var enteredPassword = $("#password").val();
+
+                    var savedEmail = localStorage.getItem("registeredEmail");
+                    var savedPassword = localStorage.getItem("registeredPassword");
+
+                    if ((enteredEmail === "admin@admin.com" && enteredPassword === "12345") ||
+                        (enteredEmail === savedEmail && enteredPassword === savedPassword)) {
+                        
+                        if (enteredEmail === "admin@admin.com") {
+                            localStorage.setItem("username", "Admin Swiftie");
+                        }
+
+                        // Redirect directly to the landing page
+                        window.location.href = "landing.html";
+                    } else {
+                        $("#loginError").slideDown();
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <!-- Responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Eras Tour | Taylor Swift</title>
+
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #222;
+            background-color: #f8f3f5;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .navbar {
+            background-color: #ffffff !important;
+            border-bottom: 2px solid #eadde3;
+        }
+
+        .navbar-brand {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #8b5c72 !important;
+        }
+
+        .navbar-brand:hover {
+            color: #6f4558 !important;
+        }
+
+        .nav-link {
+            color: #444 !important;
+            font-size: 0.95rem;
+            margin: 0 5px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #8b5c72 !important;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 3rem;
+            color: #70465a;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            max-width: 700px;
+            margin: auto;
+            color: #666;
+        }
+
+        .hero {
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+
+            background: linear-gradient(
+                135deg,
+                #f9edf2,
+                #eee2e8
+            );
+        }
+
+        .hero-text h1 {
+            font-size: 4.5rem;
+            line-height: 1;
+            color: #70465a;
+            margin-bottom: 20px;
+        }
+
+        .hero-text h2 {
+            font-size: 2rem;
+            color: #8b5c72;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            color: #555;
+            max-width: 600px;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 20px;
+        }
+
+        .custom-btn {
+            background-color: #8b5c72;
+            border: 2px solid #8b5c72;
+            color: white;
+            padding: 11px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .custom-btn:hover {
+            background-color: #70465a;
+            border-color: #70465a;
+            color: white;
+        }
+
+        .history {
+            background-color: #ffffff;
+        }
+
+        .history-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 18px;
+        }
+
+        .history-text {
+            padding: 10px;
+        }
+
+        .history-text h3 {
+            font-size: 2.5rem;
+            color: #70465a;
+            margin-bottom: 20px;
+        }
+
+        .story {
+            background-color: #f8f3f5;
+        }
+
+        .story-card {
+            background-color: white;
+            height: 100%;
+            padding: 30px;
+            border-radius: 18px;
+            border: 1px solid #eadde3;
+            transition: 0.3s;
+        }
+
+        .story-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .story-icon {
+            font-size: 2.2rem;
+            color: #8b5c72;
+            margin-bottom: 15px;
+        }
+
+        .story-card h3 {
+            font-size: 1.8rem;
+            color: #70465a;
+        }
+
+        .timeline-section {
+            background-color: white;
+        }
+
+        .timeline {
+            border-left: 3px solid #8b5c72;
+            padding-left: 30px;
+        }
+
+        .timeline-item {
+            margin-bottom: 28px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: "";
+            width: 13px;
+            height: 13px;
+            background-color: #8b5c72;
+            border-radius: 50%;
+            position: absolute;
+            left: -38px;
+            top: 7px;
+        }
+
+        .timeline-item h3 {
+            margin-bottom: 3px;
+            color: #70465a;
+            font-size: 1.7rem;
+        }
+
+        .timeline-item p {
+            margin: 0;
+            color: #666;
+        }
+
+        .featured {
+            background-color: #f8f3f5;
+        }
+
+        .era-card {
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            border: 1px solid #eadde3;
+            border-radius: 18px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .era-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .era-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .era-card-body {
+            padding: 25px;
+        }
+
+        .era-card-body h3 {
+            color: #70465a;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .era-card-body p {
+            color: #666;
+            margin-bottom: 0;
+        }
+
+        .words {
+            background-color: white;
+        }
+
+        .quote-box {
+            width: 100%;
+            max-width: 850px;
+            margin: auto;
+            padding: 45px;
+            background-color: #f8f3f5;
+            border-left: 5px solid #8b5c72;
+            border-radius: 15px;
+        }
+
+        .quote-box blockquote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-style: italic;
+            color: #70465a;
+            margin-bottom: 20px;
+        }
+
+        .quote-source {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .legacy {
+            background-color: #f8f3f5;
+        }
+
+        .legacy-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 18px;
+            border: 1px solid #eadde3;
+            height: 100%;
+        }
+
+        .legacy-card h3 {
+            color: #70465a;
+            font-size: 1.9rem;
+        }
+
+        .legacy-card i {
+            font-size: 2rem;
+            color: #8b5c72;
+            margin-bottom: 15px;
+        }
+
+        .sources {
+            background-color: white;
+        }
+
+        .source-box {
+            height: 100%;
+            background-color: #f8f3f5;
+            border: 1px solid #eadde3;
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        .source-box h3 {
+            color: #70465a;
+        }
+
+        .source-box a {
+            color: #8b5c72;
+            text-decoration: none;
+        }
+
+        .source-box a:hover {
+            text-decoration: underline;
+        }
+
+        .cta {
+            background-color: #70465a;
+            color: white;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 25px;
+        }
+
+        .cta .custom-btn {
+            background-color: white;
+            color: #70465a;
+            border-color: white;
+        }
+
+        .cta .custom-btn:hover {
+            background-color: #f8f3f5;
+            color: #70465a;
+        }
+
+        footer {
+            background-color: #ffffff;
+            border-top: 2px solid #eadde3;
+            text-align: center;
+            padding: 25px 15px;
+            color: #666;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        a:focus,
+        button:focus {
+            outline: 3px solid #8b5c72;
+            outline-offset: 3px;
+        }
+
+        @media (max-width: 991.98px) {
+
+            .hero {
+                min-height: auto;
+                padding: 70px 0;
+            }
+
+            .hero-text h1 {
+                font-size: 3.8rem;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+
+        }
+
+
+        @media (max-width: 767.98px) {
+
+            section {
+                padding: 55px 0;
+            }
+
+            .section-title {
+                margin-bottom: 35px;
+            }
+
+            .section-title h2 {
+                font-size: 2.5rem;
+            }
+
+            .hero {
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 3.2rem;
+            }
+
+            .hero-text h2 {
+                font-size: 1.7rem;
+            }
+
+            .hero-text p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-image {
+                margin-top: 30px;
+            }
+
+            .history-text {
+                padding-top: 30px;
+            }
+
+            .history-text h3 {
+                font-size: 2.2rem;
+            }
+
+            .timeline {
+                padding-left: 25px;
+            }
+
+            .quote-box {
+                padding: 30px 25px;
+            }
+
+            .quote-box blockquote {
+                font-size: 1.7rem;
+            }
+
+            .cta h2 {
+                font-size: 2.5rem;
+            }
+
+        }
+
+        @media (max-width: 575.98px) {
+
+            .navbar-brand {
+                font-size: 1.5rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2.7rem;
+            }
+
+            .hero-text h2 {
+                font-size: 1.45rem;
+            }
+
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+
+            .era-card-body {
+                padding: 20px;
+            }
+
+            .era-card-body h3 {
+                font-size: 1.7rem;
+            }
+
+            .story-card,
+            .legacy-card {
+                padding: 25px;
+            }
+
+            .quote-box {
+                padding: 25px 20px;
+            }
+
+            .quote-box blockquote {
+                font-size: 1.5rem;
+            }
+
+            .cta h2 {
+                font-size: 2.2rem;
+            }
+
+            .custom-btn {
+                width: 100%;
+                text-align: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+
+            <div class="container">
+
+                <a class="navbar-brand" href="#home">
+                    The Eras Tour
+                </a>
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavigation"
+                    aria-controls="mainNavigation"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+
+                <div
+                    class="collapse navbar-collapse"
+                    id="mainNavigation">
+
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#history">
+                                Tour History
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#albums">
+                                Albums
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#featured">
+                                Featured Eras
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#words">
+                                In Her Words
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="container">
+
+                <div class="row align-items-center g-5">
+
+                    <div class="col-lg-7 col-md-12">
+
+                        <div class="hero-text">
+
+                            <h1>
+                                The Eras Tour
+                            </h1>
+
+                            <h2>
+                                A Journey Through Music
+                            </h2>
+
+                            <p>
+                                The Eras Tour celebrates Taylor Swift's musical journey
+                                by bringing together different chapters of her career
+                                into one unforgettable experience.
+                            </p>
+
+                            <a
+                                href="#history"
+                                class="custom-btn">
+
+                                Explore the Journey
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-lg-5 col-md-12">
+
+                        <img
+                            src="mainpage.jpg"
+                            class="hero-image img-fluid"
+                            alt="Taylor Swift performing during The Eras Tour">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="history" id="history">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+                        Tour History
+                    </h2>
+
+                    <p>
+                        A tour created to celebrate the different eras
+                        of Taylor Swift's musical career.
+                    </p>
+
+                </div>
+
+
+                <div class="row align-items-center g-5">
+
+                    <div class="col-lg-6 col-md-12">
+
+                        <img
+                            src="about.jpg"
+                            class="history-image img-fluid"
+                            alt="Taylor Swift during The Eras Tour">
+
+                    </div>
+
+
+                    <div class="col-lg-6 col-md-12">
+
+                        <div class="history-text">
+
+                            <h3>
+                                More Than Just a Concert
+                            </h3>
+
+                            <p>
+                                The Eras Tour began on March 17, 2023.
+                                Instead of focusing on only one album,
+                                the tour was designed around the different
+                                musical eras of Taylor Swift's career.
+                            </p>
+
+                            <p>
+                                Each era has its own music, visual style,
+                                costumes, and atmosphere. Together, they
+                                create a celebration of Taylor's growth
+                                as a songwriter and performer.
+                            </p>
+
+                            <p>
+                                The tour also required extensive preparation.
+                                Taylor described the performance as one of
+                                the most demanding tours she had ever done.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="story">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+                        Taylor's Story
+                    </h2>
+
+                    <p>
+                        Different stages of her career show how her
+                        music and identity continued to develop.
+                    </p>
+
+                </div>
+
+
+                <div class="row g-4">
+
+
+                    <div class="col-12 col-sm-6 col-lg-4">
+
+                        <article class="story-card">
+
+                            <div class="story-icon">
+
+                                <i
+                                    class="bi bi-music-note-beamed"
+                                    aria-hidden="true">
+                                </i>
+
+                            </div>
+
+                            <h3>
+                                Beginning
+                            </h3>
+
+                            <p>
+                                Taylor began her career as a country
+                                singer-songwriter, introducing herself
+                                through personal storytelling and songs
+                                inspired by her experiences.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 col-lg-4">
+
+                        <article class="story-card">
+
+                            <div class="story-icon">
+
+                                <i
+                                    class="bi bi-stars"
+                                    aria-hidden="true">
+                                </i>
+
+                            </div>
+
+                            <h3>
+                                Reinvention
+                            </h3>
+
+                            <p>
+                                Across different albums, Taylor experimented
+                                with new sounds, visuals, and songwriting
+                                styles while continuing to develop her
+                                artistic identity.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 col-lg-4">
+
+                        <article class="story-card">
+
+                            <div class="story-icon">
+
+                                <i
+                                    class="bi bi-mic-fill"
+                                    aria-hidden="true">
+                                </i>
+
+                            </div>
+
+                            <h3>
+                                Modern Era
+                            </h3>
+
+                            <p>
+                                The Eras Tour brings these different chapters
+                                together, allowing audiences to experience
+                                the evolution of Taylor's music in one
+                                performance.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="timeline-section" id="albums">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+                        Album Timeline
+                    </h2>
+
+                    <p>
+                        A look through the albums represented by
+                        Taylor's different eras.
+                    </p>
+
+                </div>
+
+
+                <div class="row justify-content-center">
+
+                    <div class="col-12 col-sm-10 col-lg-8">
+
+                        <div class="timeline">
+
+
+                            <article class="timeline-item">
+
+                                <h3>
+                                    Taylor Swift
+                                </h3>
+
+                                <p>
+                                    The beginning of Taylor's musical journey.
+                                </p>
+
+                            </article>
+
+
+                            <article class="timeline-item">
+
+                                <h3>
+                                    Fearless
+                                </h3>
+
+                                <p>
+                                    An era known for its youthful
+                                    storytelling and romance.
+                                </p>
+
+                            </article>
+
+
+                            <article class="timeline-item">
+
+                                <h3>
+                                    Speak Now
+                                </h3>
+
+                                <p>
+                                    A deeply personal album written
+                                    entirely by Taylor.
+                                </p>
+
+                            </article>
+
+
+                            <article class="timeline-item">
+
+                                <h3>
+                                    Red
+                                </h3>
+
+                                <p>
+                                    A colorful era exploring love,
+                                    heartbreak, and change.
+                                </p>
+
+                            </article>
+
+
+                            <article class="timeline-item">
+
+                                <h3>
+                                    1989
+                                </h3>
+
+                                <p>
+                                    A major shift toward pop music
+                                    and a new sound.
+                                </p>
+
+                            </article>
+
+
+                            <article class="timeline-item">
+
+                                <h3>
+                                    Reputation
+                                </h3>
+
+                                <p>
+                                    A darker and more dramatic chapter
+                                    of Taylor's career.
+                                </p>
+
+                            </article>
+
+
+                            <article class="timeline-item">
+
+                                <h3>
+                                    Lover
+                                </h3>
+
+                                <p>
+                                    A colorful era centered around
+                                    love and optimism.
+                                </p>
+
+                            </article>
+
+
+                            <article class="timeline-item">
+
+                                <h3>
+                                    folklore
+                                </h3>
+
+                                <p>
+                                    A softer and more fictional
+                                    storytelling direction.
+                                </p>
+
+                            </article>
+
+
+                            <article class="timeline-item">
+
+                                <h3>
+                                    evermore
+                                </h3>
+
+                                <p>
+                                    A continuation of the intimate
+                                    storytelling style.
+                                </p>
+
+                            </article>
+
+
+                            <article class="timeline-item">
+
+                                <h3>
+                                    Midnights
+                                </h3>
+
+                                <p>
+                                    A reflective album exploring
+                                    thoughts and memories.
+                                </p>
+
+                            </article>
+
+
+                            <article class="timeline-item">
+
+                                <h3>
+                                    The Tortured Poets Department
+                                </h3>
+
+                                <p>
+                                    A newer chapter in Taylor's
+                                    songwriting journey.
+                                </p>
+
+                            </article>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="featured" id="featured">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+                        Featured Eras
+                    </h2>
+
+                    <p>
+                        Four eras that represent different sides
+                        of Taylor Swift's musical and visual evolution.
+                    </p>
+
+                </div>
+
+
+                <div class="row g-4">
+
+
+                    <div class="col-12 col-sm-6 col-lg-3">
+
+                        <article class="era-card">
+
+                            <img
+                                src="era-red.jpg"
+                                class="img-fluid"
+                                alt="Red era inspired image of Taylor Swift">
+
+                            <div class="era-card-body">
+
+                                <h3>
+                                    Red
+                                </h3>
+
+                                <p>
+                                    The Red era explores intense emotions,
+                                    changing relationships, and the experience
+                                    of growing through love and heartbreak.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 col-lg-3">
+
+                        <article class="era-card">
+
+                            <img
+                                src="era-1989.jpg"
+                                class="img-fluid"
+                                alt="1989 era inspired image of Taylor Swift">
+
+                            <div class="era-card-body">
+
+                                <h3>
+                                    1989
+                                </h3>
+
+                                <p>
+                                    1989 marked an important transition into
+                                    pop music, creating a bright and energetic
+                                    era with a distinct visual identity.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 col-lg-3">
+
+                        <article class="era-card">
+
+                            <img
+                                src="era-reputation.jpg"
+                                class="img-fluid"
+                                alt="Reputation era inspired image of Taylor Swift">
+
+                            <div class="era-card-body">
+
+                                <h3>
+                                    Reputation
+                                </h3>
+
+                                <p>
+                                    Reputation introduced a darker and more
+                                    dramatic atmosphere while exploring themes
+                                    of identity, perception, and personal
+                                    relationships.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 col-lg-3">
+
+                        <article class="era-card">
+
+                            <img
+                                src="era-lover.jpg"
+                                class="img-fluid"
+                                alt="Lover era inspired image of Taylor Swift">
+
+                            <div class="era-card-body">
+
+                                <h3>
+                                    Lover
+                                </h3>
+
+                                <p>
+                                    Lover brought a colorful and softer visual
+                                    style, focusing on love, hope, happiness,
+                                    and personal expression.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="words" id="words">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+                        In Her Own Words
+                    </h2>
+
+                    <p>
+                        A reflection from Taylor about the work
+                        behind The Eras Tour.
+                    </p>
+
+                </div>
+
+
+                <div class="row justify-content-center">
+
+                    <div class="col-12 col-lg-10">
+
+                        <div class="quote-box">
+
+                            <blockquote>
+                                “I knew this tour was harder than anything
+                                I’d ever done before by a long shot.”
+                            </blockquote>
+
+                            <p class="quote-source">
+                                — Taylor Swift, TIME interview, 2023
+                            </p>
+
+                            <p>
+                                The statement reflects the amount of preparation
+                                and physical effort required for The Eras Tour.
+                                The performance brought together songs and memories
+                                from different periods of her career, making the
+                                tour both physically demanding and personally
+                                meaningful.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="legacy">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+                        The Legacy of the Eras Tour
+                    </h2>
+
+                    <p>
+                        The tour became a celebration of Taylor Swift's
+                        career and connection with her audience.
+                    </p>
+
+                </div>
+
+
+                <div class="row g-4">
+
+
+                    <div class="col-12 col-sm-6 col-lg-4">
+
+                        <article class="legacy-card">
+
+                            <i
+                                class="bi bi-music-note-list"
+                                aria-hidden="true">
+                            </i>
+
+                            <h3>
+                                Music
+                            </h3>
+
+                            <p>
+                                The tour brought together songs from multiple
+                                albums, allowing fans to experience different
+                                stages of Taylor's musical development.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- Fans -->
+
+                    <div class="col-12 col-sm-6 col-lg-4">
+
+                        <article class="legacy-card">
+
+                            <i
+                                class="bi bi-people"
+                                aria-hidden="true">
+                            </i>
+
+                            <h3>
+                                Fans
+                            </h3>
+
+                            <p>
+                                The Eras Tour created a shared experience
+                                for fans, connecting people through songs,
+                                memories, and different eras.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- Impact -->
+
+                    <div class="col-12 col-sm-6 col-lg-4">
+
+                        <article class="legacy-card">
+
+                            <i
+                                class="bi bi-globe2"
+                                aria-hidden="true">
+                            </i>
+
+                            <h3>
+                                Impact
+                            </h3>
+
+                            <p>
+                                The scale of the tour demonstrated the
+                                continuing cultural impact of Taylor Swift's
+                                music and career.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="sources">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>
+                        Sources
+                    </h2>
+
+                    <p>
+                        References used for the information presented
+                        on this page.
+                    </p>
+
+                </div>
+
+
+                <div class="row g-4">
+
+
+                    <!-- Official Archive -->
+
+                    <div class="col-12 col-md-6">
+
+                        <article class="source-box">
+
+                            <h3>
+                                Taylor Swift Official Archive
+                            </h3>
+
+                            <p>
+                                Official archive containing information
+                                about Taylor Swift's different musical
+                                eras and releases.
+                            </p>
+
+                            <a
+                                href="https://www.taylorswift.com/swiftiearchive/"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                Visit Official Archive
+
+                                <i
+                                    class="bi bi-box-arrow-up-right"
+                                    aria-hidden="true">
+                                </i>
+
+                            </a>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- TIME -->
+
+                    <div class="col-12 col-md-6">
+
+                        <article class="source-box">
+
+                            <h3>
+                                TIME Interview
+                            </h3>
+
+                            <p>
+                                TIME's 2023 interview with Taylor Swift
+                                discussing her career, music, preparation,
+                                and The Eras Tour.
+                            </p>
+
+                            <a
+                                href="https://time.com/6342806/person-of-the-year-2023-taylor-swift/"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                Read the Interview
+
+                                <i
+                                    class="bi bi-box-arrow-up-right"
+                                    aria-hidden="true">
+                                </i>
+
+                            </a>
+
+                        </article>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="cta">
+
+            <div class="container">
+
+                <h2>
+                    Every Era Has a Story
+                </h2>
+
+                <p>
+                    From the beginning of her career to The Eras Tour,
+                    every chapter represents a different part of
+                    Taylor Swift's musical journey.
+                </p>
+
+                <a
+                    href="#home"
+                    class="custom-btn">
+
+                    Back to Top
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Retrieve username from localStorage and display a dynamic welcome message
+            let storedUser = localStorage.getItem("username");
+            if (storedUser) {
+                $(".hero-text h1").before("<h3 style='color: #8b5c72; font-weight: bold; margin-bottom: 10px;'>Welcome, " + storedUser + "!</h3>");
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
